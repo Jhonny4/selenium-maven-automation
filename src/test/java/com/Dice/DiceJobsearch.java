@@ -1,5 +1,7 @@
 package com.Dice;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -75,7 +77,36 @@ public class DiceJobsearch {
 			throw new RuntimeException("Step Fail. Dice homepage did not succesfully loaded");
 		}
 		
-		String keyword ="java developer";
+		ArrayList<String> list = new ArrayList<String>();
+
+       
+            list .add("java");
+            list.add("selenium");
+            list.add("tester");
+            list .add("c");
+            list.add("developer");
+            list.add("automation");
+            list .add("Aerospace Engineer");
+            list.add("Agricultural Engineer");
+            list.add("Automotive Engineer");
+            list.add("ABiomedical Engineer");
+            list .add("Chemical Engineer");
+            list.add("Civil Engineer");
+            list.add("Computer Engineer");
+            list .add("Drafting and Design Engineer");
+            list.add("Electrical Engineer"); 
+            	
+            list.add("Environmental Engineer");
+            list .add("Marine Engineer");
+            list.add("Mechanical Engineer");
+            list.add("Petroleum Engineer");
+            list.add("Software Engineer");
+            
+        
+       for (String keyword : list ){
+           
+       
+		//String keyword ="java developer";
 		
 		driver.findElement(By.id("search-field-keyword")).clear();
 		driver.findElement(By.id("search-field-keyword")).sendKeys(keyword);
@@ -99,32 +130,12 @@ public class DiceJobsearch {
 		   				countResult +" results in " + location);
 		   		}
 		    		
+	   driver.navigate().back();
 		   	
-		   		driver.close();
+		}
+     
 		   		
-		   	//	hmw
-		   		
-//		   		1)Create arraylist of keywords.
-//		   		add 20 different keyworks
-//		   		list.add("java");
-//
-//		   		pass each item to search box and print accordingly.
-//		   		modify your arraylist 
-//
-//		   		java-1234
-//
-//		   		2) Store all keywords into a text file 
-//		   		read the text file and  repeat above steps.
-//
-//		   		store keyword and results count into an arraylist.
-//		   		----
-//
-//		   		after closing browser.
-//		   		print contents of arraylist that was updated each time 
-//		   		we looped.
-
-		   		//commit > push > share your github link
-
+	
 		   			
 		
 	}
